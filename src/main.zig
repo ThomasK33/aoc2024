@@ -23,3 +23,7 @@ pub fn main() !void {
 
     return error.UnknownSubcommand;
 }
+
+test {
+    std.testing.refAllDecls(@This());
+}
