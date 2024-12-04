@@ -12,7 +12,7 @@ pub fn run(
         return error.MissingFileName;
     }
 
-    // read file contents up to 16KB
+    // read file contents up to 32KB
     const contents = try std.fs.cwd().readFileAlloc(allocator, args[0], 32 * 1024);
     defer allocator.free(contents);
 
